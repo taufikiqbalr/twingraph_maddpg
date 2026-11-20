@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "model_id": "twingraph_maddpg",
+  "results_policy_id": "maddpg_srdg_v2",
+  "label": "TwinGraph-MADDPG",
+  "purpose": "Selected documented settings for the JCCE experiments; descriptive records, not an executable trainer configuration.",
+  "learning": {
+    "hidden_dim": 160,
+    "batch_size": 64,
+    "updates_per_step": 4,
+    "gamma": 0.97,
+    "tau": 0.016,
+    "reward_scale": 0.078,
+    "team_reward_weight": 0.6,
+    "actor_lr": 0.00021,
+    "critic_lr": 0.00044,
+    "replay_capacity": 12000,
+    "max_grad_norm": 0.8,
+    "target_update": {
+      "rule": "target <- (1 - tau) * target + tau * online",
+      "tau": 0.016,
+      "frequency": "on each actor update"
+    },
+    "replay_unit": "agent transition",
+    "exploration_by_agents": [
+      {
+        "agents": [
+          3,
+          5
+        ],
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      {
+        "agents": [
+          7,
+          9
+        ],
+        "epsilon_initial": 0.28,
+        "epsilon_decay_per_episode": 0.998,
+        "epsilon_minimum": 0.05
+      }
+    ],
+    "exploration_note": "Schedules apply in both mobility settings; conditions.json resolves the schedule for each condition.",
+    "gumbel_tau": 0.6,
+    "actor_update_delay": 2,
+    "target_policy_noise": 0.0,
+    "target_policy_noise_clip": 0.0,
+    "use_twin_critics": true,
+    "use_prioritized_replay": true,
+    "use_heuristic_warmstart": true
+  },
+  "architecture": {
+    "actor": {
+      "hidden_layers": [
+        160,
+        160
+      ],
+      "activation": "ReLU",
+      "output_logits_per_candidate": 7,
+      "shared_across_agents": true
+    },
+    "critic": {
+      "independent_critics": 2,
+      "hidden_width": 160,
+      "type": "candidate-graph and agent-coordination graph critic",
+      "candidate_attention_blocks_before_graph": 2,
+      "candidate_attention_blocks_after_graph": 2,
+      "agent_attention_blocks": 2,
+      "attention_heads_per_block": 4,
+      "attention_feedforward_width": 320,
+      "communication_rounds": 2,
+      "role_count": 4,
+      "candidate_and_agent_encoders_hidden_layers": [
+        160,
+        160
+      ],
+      "note": "A branched graph architecture; these module depths are not a single sequential total-layer count. Full graph, gating and auxiliary-head implementation is not distributed."
+    }
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "actor_weight_decay": 1e-05,
+    "critic_weight_decay": 5e-05
+  },
+  "release_limitations": [
+    "The trainer, simulator, model implementations, weights and complete internal configuration are not included."
+  ]
+}

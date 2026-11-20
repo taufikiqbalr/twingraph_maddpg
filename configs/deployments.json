@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "units_note": "Spatial extents are simulator coordinates; increasing agent count also changes area, stations and devices.",
+  "deployments": [
+    {
+      "id": "agents3",
+      "agents": 3,
+      "global_agents": 1,
+      "regional_agents": 2,
+      "base_stations": 12,
+      "devices_per_base_station": 5,
+      "devices": 60,
+      "plane_width_simulator_units": 120.0,
+      "plane_height_simulator_units": 120.0,
+      "base_station_intensity_per_square_simulator_unit": 0.0008,
+      "candidate_limit_per_agent": 8,
+      "candidate_feature_dimension": 55,
+      "summary_dimension_per_agent": 26,
+      "action_count_per_candidate": 7,
+      "temporal_window": 4
+    },
+    {
+      "id": "agents5",
+      "agents": 5,
+      "global_agents": 1,
+      "regional_agents": 4,
+      "base_stations": 20,
+      "devices_per_base_station": 5,
+      "devices": 100,
+      "plane_width_simulator_units": 160.0,
+      "plane_height_simulator_units": 160.0,
+      "base_station_intensity_per_square_simulator_unit": 0.0008,
+      "candidate_limit_per_agent": 8,
+      "candidate_feature_dimension": 55,
+      "summary_dimension_per_agent": 28,
+      "action_count_per_candidate": 7,
+      "temporal_window": 4
+    },
+    {
+      "id": "agents7",
+      "agents": 7,
+      "global_agents": 1,
+      "regional_agents": 6,
+      "base_stations": 30,
+      "devices_per_base_station": 5,
+      "devices": 150,
+      "plane_width_simulator_units": 190.0,
+      "plane_height_simulator_units": 190.0,
+      "base_station_intensity_per_square_simulator_unit": 0.0008,
+      "candidate_limit_per_agent": 8,
+      "candidate_feature_dimension": 55,
+      "summary_dimension_per_agent": 30,
+      "action_count_per_candidate": 7,
+      "temporal_window": 4
+    },
+    {
+      "id": "agents9",
+      "agents": 9,
+      "global_agents": 1,
+      "regional_agents": 8,
+      "base_stations": 40,
+      "devices_per_base_station": 5,
+      "devices": 200,
+      "plane_width_simulator_units": 220.0,
+      "plane_height_simulator_units": 220.0,
+      "base_station_intensity_per_square_simulator_unit": 0.0008,
+      "candidate_limit_per_agent": 8,
+      "candidate_feature_dimension": 55,
+      "summary_dimension_per_agent": 32,
+      "action_count_per_candidate": 7,
+      "temporal_window": 4
+    }
+  ],
+  "mobility": {
+    "ppp": "Synthetic Poisson-deployed infrastructure with synthetic mobility",
+    "tdrive": {
+      "min_points_per_usable_vehicle_file": 100,
+      "anchor_mode": "relative",
+      "training_partition": "train",
+      "primary_evaluation_partition": "eval",
+      "partition_unit": "vehicle file",
+      "trajectories_distributed": false
+    }
+  }
+}

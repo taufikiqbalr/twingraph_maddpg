@@ -1,0 +1,1726 @@
+{
+  "schema_version": 1,
+  "record_type": "descriptive experiment settings",
+  "conditions": [
+    {
+      "condition_id": "ppp_agents3_centralized_ddqn",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 1398,
+        "branch_count": 24,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents3_gat_maddpg",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents3_maddpg",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents3_twingraph_maddpg",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents3_mappo",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents3_matd3",
+      "mobility": "ppp",
+      "agents": 3,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_centralized_ddqn",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 2340,
+        "branch_count": 40,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_gat_maddpg",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_maddpg",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_twingraph_maddpg",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_mappo",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents5_matd3",
+      "mobility": "ppp",
+      "agents": 5,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_centralized_ddqn",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 3290,
+        "branch_count": 56,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_gat_maddpg",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_maddpg",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_twingraph_maddpg",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.28,
+        "epsilon_decay_per_episode": 0.998,
+        "epsilon_minimum": 0.05
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_mappo",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents7_matd3",
+      "mobility": "ppp",
+      "agents": 7,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_centralized_ddqn",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 4248,
+        "branch_count": 72,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_gat_maddpg",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_maddpg",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_twingraph_maddpg",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.28,
+        "epsilon_decay_per_episode": 0.998,
+        "epsilon_minimum": 0.05
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_mappo",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "ppp_agents9_matd3",
+      "mobility": "ppp",
+      "agents": 9,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_centralized_ddqn",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 1398,
+        "branch_count": 24,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_gat_maddpg",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_maddpg",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_twingraph_maddpg",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_mappo",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents3_matd3",
+      "mobility": "tdrive",
+      "agents": 3,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 26,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "wall_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_centralized_ddqn",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 2340,
+        "branch_count": 40,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_gat_maddpg",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_maddpg",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_twingraph_maddpg",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_mappo",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents5_matd3",
+      "mobility": "tdrive",
+      "agents": 5,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 28,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_centralized_ddqn",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 3290,
+        "branch_count": 56,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_gat_maddpg",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_maddpg",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_twingraph_maddpg",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.28,
+        "epsilon_decay_per_episode": 0.998,
+        "epsilon_minimum": 0.05
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_mappo",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents7_matd3",
+      "mobility": "tdrive",
+      "agents": 7,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 30,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_centralized_ddqn",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "centralized_ddqn",
+      "results_policy_id": "jcce_centralized_ddqn",
+      "model_config": "models/centralized_ddqn.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.078,
+        "learning_rate": 0.0003,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "input_dim": 4248,
+        "branch_count": 72,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_gat_maddpg",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "gat_maddpg",
+      "results_policy_id": "jcce_gat_maddpg",
+      "model_config": "models/gat_maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_maddpg",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "maddpg",
+      "results_policy_id": "maddpg",
+      "model_config": "models/maddpg.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_twingraph_maddpg",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "twingraph_maddpg",
+      "results_policy_id": "maddpg_srdg_v2",
+      "model_config": "models/twingraph_maddpg.json",
+      "learning": {
+        "hidden_dim": 160,
+        "batch_size": 64,
+        "updates_per_step": 4,
+        "gamma": 0.97,
+        "tau": 0.016,
+        "reward_scale": 0.078,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.00021,
+        "critic_lr": 0.00044,
+        "epsilon_initial": 0.28,
+        "epsilon_decay_per_episode": 0.998,
+        "epsilon_minimum": 0.05
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_mappo",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "mappo",
+      "results_policy_id": "mappo",
+      "model_config": "models/mappo.json",
+      "learning": {
+        "hidden_dim": 96,
+        "minibatch_size": 16,
+        "update_epochs": 12,
+        "gamma": 0.96,
+        "team_reward_weight": 0.65,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0007
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    },
+    {
+      "condition_id": "tdrive_agents9_matd3",
+      "mobility": "tdrive",
+      "agents": 9,
+      "model_id": "matd3",
+      "results_policy_id": "matd3",
+      "model_config": "models/matd3.json",
+      "learning": {
+        "hidden_dim": 96,
+        "batch_size": 48,
+        "updates_per_step": 2,
+        "gamma": 0.97,
+        "tau": 0.02,
+        "reward_scale": 0.08,
+        "team_reward_weight": 0.6,
+        "actor_lr": 0.0003,
+        "critic_lr": 0.0008,
+        "epsilon_initial": 0.25,
+        "epsilon_decay_per_episode": 0.995,
+        "epsilon_minimum": 0.03
+      },
+      "dimensions": {
+        "candidate_limit": 8,
+        "summary_dim": 32,
+        "candidate_dim": 55,
+        "action_dim": 7
+      },
+      "training_seeds": [
+        11,
+        17,
+        23
+      ],
+      "training_episodes": 1000,
+      "steps_per_episode": 80,
+      "training_clock": "logical_clock",
+      "evaluation_clock": "logical_clock"
+    }
+  ]
+}

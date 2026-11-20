@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "model_id": "maddpg",
+  "results_policy_id": "maddpg",
+  "label": "MADDPG",
+  "purpose": "Selected documented settings for the JCCE experiments; descriptive records, not an executable trainer configuration.",
+  "learning": {
+    "hidden_dim": 96,
+    "batch_size": 48,
+    "updates_per_step": 2,
+    "gamma": 0.97,
+    "tau": 0.02,
+    "reward_scale": 0.08,
+    "team_reward_weight": 0.6,
+    "actor_lr": 0.0003,
+    "critic_lr": 0.0008,
+    "replay_capacity": 12000,
+    "max_grad_norm": 0.8,
+    "target_update": {
+      "rule": "target <- (1 - tau) * target + tau * online",
+      "tau": 0.02,
+      "frequency": "on each actor update"
+    },
+    "replay_unit": "agent transition",
+    "epsilon_initial": 0.25,
+    "epsilon_decay_per_episode": 0.995,
+    "epsilon_minimum": 0.03,
+    "gumbel_tau": 0.7,
+    "actor_update_delay": 1,
+    "target_policy_noise": 0.0,
+    "target_policy_noise_clip": 0.0,
+    "use_twin_critics": false,
+    "use_prioritized_replay": false,
+    "use_heuristic_warmstart": true
+  },
+  "architecture": {
+    "actor": {
+      "hidden_layers": [
+        96,
+        96
+      ],
+      "activation": "ReLU",
+      "output_logits_per_candidate": 7,
+      "shared_across_agents": true
+    },
+    "critic": {
+      "independent_critics": 1,
+      "hidden_layers": [
+        96,
+        96
+      ],
+      "activation": "ReLU",
+      "scalar_output": true,
+      "type": "centralized action critic"
+    }
+  },
+  "optimizer": {
+    "name": "Adam",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "epsilon": 1e-08,
+    "actor_weight_decay": 0.0,
+    "critic_weight_decay": 0.0
+  },
+  "release_limitations": [
+    "The trainer, simulator, model implementations, weights and complete internal configuration are not included."
+  ]
+}

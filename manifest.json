@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "release_date": "2026-11-20",
+  "scope": "Recorded-data analysis and selected published experiment settings; no training implementation",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 91,
+      "sha256": "6e0253cb330216fcd38b73577beb560c424fa1fc92b7b63aeb50b99f1162b1e7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5426,
+      "sha256": "4cf50a221b58d3c9d5d5af0a99910059321f3f0407cd8313e18c7cc551cb46dd"
+    },
+    {
+      "path": "configs/conditions.json",
+      "bytes": 45104,
+      "sha256": "3f478892aade0bd5931b10505bcb240edf66814d264567b8e22aa161cc829b24"
+    },
+    {
+      "path": "configs/deployments.json",
+      "bytes": 2686,
+      "sha256": "48078263750695bca7698ee0c3e24b54bcb005565a7e083b72864020a93cbae1"
+    },
+    {
+      "path": "configs/models/centralized_ddqn.json",
+      "bytes": 1418,
+      "sha256": "2d0f68a72a324015da7b73da37c85ea220726090dea79cfa7dfe37cd832d458b"
+    },
+    {
+      "path": "configs/models/gat_maddpg.json",
+      "bytes": 1937,
+      "sha256": "db61e646c06de90ce6a7f14c24b660bb4b693c84ac9bc358a4926016389a08aa"
+    },
+    {
+      "path": "configs/models/maddpg.json",
+      "bytes": 1776,
+      "sha256": "1a5acc3fce606136716a9fdd6dc095d2c4db5e5c75efa2d093df2f35ebcb1868"
+    },
+    {
+      "path": "configs/models/mappo.json",
+      "bytes": 1284,
+      "sha256": "bfe976817f7236105eb7ea6201bb12daeb1b526fb159e5eaadd4a6fe979bdfda"
+    },
+    {
+      "path": "configs/models/matd3.json",
+      "bytes": 1774,
+      "sha256": "0ad5f830352ec9789be5bdf1919ca92e89ac72b566a23b2ad804af619a88ff13"
+    },
+    {
+      "path": "configs/models/twingraph_maddpg.json",
+      "bytes": 2735,
+      "sha256": "fded2924c0280421af2e4374cafde0201a4d12914740fc1f639637e03de25f56"
+    },
+    {
+      "path": "configs/protocol.json",
+      "bytes": 7971,
+      "sha256": "b64ba313eaea43d4902f923a9f592e7c5b71dbcd299876a9af5493f5e90c06d0"
+    },
+    {
+      "path": "configs/run_manifest.csv",
+      "bytes": 57947,
+      "sha256": "e4ec1886a049c0c4a1146dfe114f16d2befa679aaf2cfa44a594cf5aa2980b4b"
+    },
+    {
+      "path": "configs/training_duration_summary.csv",
+      "bytes": 6117,
+      "sha256": "42eb880e966c6697f274f33a602052bd8b7bd9a9e0a3986a419b0ba4367fe6af"
+    },
+    {
+      "path": "data/evaluation_episodes.csv",
+      "bytes": 482735,
+      "sha256": "700af58c8ede4dbfdf1d64e17cd3278e2480ff150c44686ac624286fcadf092c"
+    },
+    {
+      "path": "data/training_episodes.csv.gz",
+      "bytes": 1944025,
+      "sha256": "63b03384f502b4d1ec7c7694a2af309dabfe9c77b02890595b505a6afad5d157"
+    },
+    {
+      "path": "docs/HYPERPARAMETERS.md",
+      "bytes": 9949,
+      "sha256": "8418f5c6007eb802ea80fcb562f25dbb12ae338e959aada89f0df670f5b2fe25"
+    },
+    {
+      "path": "docs/METRICS_AND_STATISTICS.md",
+      "bytes": 8300,
+      "sha256": "10427f9344e1466a74a3f30853c599a4ecfdf1b71b80ce8b4935f04133a9ca69"
+    },
+    {
+      "path": "docs/TRAINING_PROTOCOL.md",
+      "bytes": 6229,
+      "sha256": "c363cd5dc3b28d1b1066494f7ae0befbdae28eafdecbcfe980cd81c930bd061b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 169,
+      "sha256": "46a98f15a8b5b78bcfdc942762da79837c54ae2617d57bde89559746c09aa59a"
+    },
+    {
+      "path": "scripts/analyze_results.py",
+      "bytes": 10679,
+      "sha256": "c64f17a70ff127a900b6dcdc0add36046548ab6893b9dfd527eb4c605c30de57"
+    },
+    {
+      "path": "scripts/plot_results.py",
+      "bytes": 13969,
+      "sha256": "6be0da2112ff6b4bdaddbd649ede3311364af53469faf2387e4625b7e3d98294"
+    },
+    {
+      "path": "scripts/verify_release.py",
+      "bytes": 2358,
+      "sha256": "1a892921307c5527b52c293659d21dd153203ce8b269531072b4581b53827ce4"
+    }
+  ]
+}
